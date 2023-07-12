@@ -1,0 +1,138 @@
+*{
+  margin: 0;
+  font-family: Roboto Mono;
+  color: #fff;
+
+}
+.container{
+  height: 100vh;
+  width: 100%;
+  background-image:linear-gradient(45deg, #EF6262, #468B97);
+  position: relative;
+}
+
+h3{
+  text-align: center;
+  margin-top: 400px;
+}
+
+.animation{
+  height: 130px;
+  width: 150px;
+  position: absolute;
+  top: 175px;
+  right: 30vw;
+}
+
+.glass::before{
+  content: '';
+  height: 150px;
+  width: 150px;
+  background-color: #1D5B79;
+  border-radius: 5%;
+  position: absolute;
+  bottom: 50px;
+  left: -65px;
+  transform: rotate(-20deg);
+  z-index: -1;
+}
+
+.glass{
+  height: 150px;
+  width: 800px;
+  margin: auto;
+  transform: translate(0 , 200%);
+
+}
+
+.glass::after{
+  content: '';
+  height: 200px;
+  width: 200px;
+  background-color: #F3AA60;
+  border-radius: 50%;
+  position: absolute;
+  top: 60px;
+  right: -60px;
+  z-index: -1;
+}
+
+#clock{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 50px;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(255, 255, 255, 0.24);
+    height: 150px;
+    width: 800px;
+}
+
+@media screen and (max-width:1000px) {
+
+  .glass::before{
+    content: '';
+    height: 100px;
+    width: 100px;
+    background-color: #1D5B79;
+    border-radius: 5%;
+    position: absolute;
+    bottom: 50px;
+    left: -65px;
+    transform: rotate(-20deg);
+    z-index: -1;
+  }
+
+  .glass{
+    height: 150px;
+    width: 150px;
+    margin: auto;
+    transform: translate(0 , 200%);
+
+  }
+
+  .glass::after{
+    content: '';
+    height: 140px;
+    width: 140px;
+    background-color: #F3AA60;
+    border-radius: 50%;
+    position: absolute;
+    top: 100px;
+    right: -130px;
+    z-index: -1;
+  }
+
+  #clock{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      background: rgba(255, 255, 255, 0.25);
+      border-radius: 16px;
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(5.4px);
+      -webkit-backdrop-filter: blur(5.4px);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      height: 200px;
+      width: 200px;
+  }
+
+  .animation{
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    top: 202px;
+    right: 40vw;
+  }
+
+  h3{
+    text-align: center;
+    margin-top: 450px;
+    font-size: 15px;
+  }
+}
